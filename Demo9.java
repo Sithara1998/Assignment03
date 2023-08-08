@@ -93,6 +93,26 @@ public class Demo9 {
             else if (avg<65 && avg>=55)status = "\033[33mPass\033[0m";
             else status = "\033[31mFail\033[0m";
 
+            String status2;
+            if (mark1 >= 75) status2 = "\033[34mDistinguished Pass\033[0m";
+            else if (mark1<75 && mark1>=65) status2 = "\033[32mPass\033[0m";
+            else if (mark1<65 && mark1>=55)status2 = "\033[33mPass\033[0m";
+            else status2 = "\033[31mFail\033[0m";
+
+            String status3;
+            if (mark2 >= 75) status3 = "\033[34mDistinguished Pass\033[0m";
+            else if (mark2<75 && mark2>=65) status3 = "\033[32mPass\033[0m";
+            else if (mark2<65 && mark2>=55)status3 = "\033[33mPass\033[0m";
+            else status3 = "\033[31mFail\033[0m";
+            
+            String status4;
+            if (mark3 >= 75) status4 = "\033[34mDistinguished Pass\033[0m";
+            else if (mark3<75 && mark3>=65) status4 = "\033[32mPass\033[0m";
+            else if (mark3<65 && mark3>=55)status4 = "\033[33mPass\033[0m";
+            else status4= "\033[31mFail\033[0m";
+
+
+
            
             String blueBolt = "\033[34m\033[1m";
             String bolt = "\033[1m";
@@ -105,13 +125,13 @@ public class Demo9 {
             System.out.printf("|Name   :%2$s%1$-27s%3$s|\n", name.toUpperCase(), blueBolt, reset);  
             System.out.printf("|Age    :%3$s%1$s %2$s%4$18s |\n", age,"Years Old" ,blueBolt,reset);      
             System.out.printf("|Status :\033[1m%-36s|\033[0m\n", status);         
-            System.out.printf("|Total  :%3$s%-17s%4$sAvg:%3$s%.2f%4$s |\n", total,avg,blueBolt,reset);   
+            System.out.printf("|Total  :%3$s%-17s%4$sAvg:%3$s%.2f%%%4$s |\n", total,avg,blueBolt,reset);   
             System.out.printf(line1); 
             System.out.printf("|  %1$sSUBJECT%2$s  |  %1$sMARKS%2$s   |   %1$sSTATUS%2$s   |\n",bolt,reset);
             System.out.printf(line1); 
-            System.out.printf(record1,Integer.valueOf(subject1.substring(3)),mark1,status);
-            System.out.printf(record1,Integer.valueOf(subject2.substring(3)),mark2,status);
-            System.out.printf(record1,Integer.valueOf(subject3.substring(3)),mark3,status);
+            System.out.printf(record1,Integer.valueOf(subject1.substring(3)),mark1,status2);
+            System.out.printf(record1,Integer.valueOf(subject2.substring(3)),mark2,status3);
+            System.out.printf(record1,Integer.valueOf(subject3.substring(3)),mark3,status4);
             System.out.printf(line1); 
                                  
         }
